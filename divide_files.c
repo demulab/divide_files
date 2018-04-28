@@ -10,8 +10,8 @@
 #include <string.h>
 #include <unistd.h>
 
-#define TEST_FILENAME  "test2.list"
-#define TRAIN_FILENAME "train2.list"
+#define TEST_FILENAME  "test.list"
+#define TRAIN_FILENAME "train.list"
 float g_portion = 0.3;
 
 
