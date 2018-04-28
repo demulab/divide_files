@@ -1,5 +1,5 @@
 # divide_files
-Divide all data into training data and test data.
+Divide all data into training data and test data for YOLO.
 
 Compile:  gcc -o divide_files divide_files.c  
 Usage:    ./divide_files [portion]  

@@ -1,4 +1,4 @@
-// divide_files.c
+// divide_files.c for Yolo
 // Compile:  gcc -o divide_files divide_files.c
 // Usage:    ./divide_files [portion]
 //           portion: the portion of test data 
