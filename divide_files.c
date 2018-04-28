@@ -1,7 +1,7 @@
 // divide_files.c
 // Compile:  gcc -o divide_files divide_files.c
 // Usage:    ./divide_files [portion]
-//           portion: the portion of test data (   default portion is 0.2
+//           portion: the portion of test data 
 #include <stdio.h>
 #include <stdlib.h>
 #include <err.h>
