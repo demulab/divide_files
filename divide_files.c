@@ -1,7 +1,9 @@
 // divide_files.c for Yolo
 // Compile:  gcc -o divide_files divide_files.c
-// Usage:    ./divide_files [portion]
-//           portion: the portion of test data 
+// Usage:
+//           ./divide_files
+//           ./divide_files [portion]
+//           portion: the portion of test data. The default value is 0.2. 
 #include <stdio.h>
 #include <stdlib.h>
 #include <err.h>
@@ -12,7 +14,7 @@
 
 #define TEST_FILENAME  "test.list"
 #define TRAIN_FILENAME "train.list"
-float g_portion = 0.3;
+float g_portion = 0.2;
 
 
 int compar(const struct dirent **s1, const struct dirent **s2)
@@ -44,9 +46,9 @@ int main (int argc, char *argv[])
     char buf[1024];
 
 
-    if (argc == 1) {
-        printf("Input the portion of test data:");
-        scanf("%f", &g_portion);
+    if (argc == 2) {
+      g_portion = atof(argv[1]);
+      printf("Portion:%f",g_portion);
     }
     if (argc > 2) {
         printf("Usage: divide_files [portion] \n");
@@ -93,6 +95,7 @@ int main (int argc, char *argv[])
     printf("all  =%d\n", file_no);
     printf("train=%d\n", train_no);
     printf("test =%d\n", test_no);
-    printf("portion=%f\n", (float)test_no/file_no);
+    printf("Set  Portion=%f\n",g_portion);
+    printf("Real Portion=%f\n", (float)test_no/file_no);
     exit(EXIT_SUCCESS);
 }

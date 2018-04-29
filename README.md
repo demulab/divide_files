@@ -8,6 +8,8 @@ gcc -o divide_files divide_files.c
 
 ## Usage:
 ```
+./divide_files
+or  
 ./divide_files [portion]
 ```
-portion: the portion of test data
+portion: the portion of test data. The default value is 0.2.
